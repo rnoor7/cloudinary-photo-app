@@ -2,9 +2,9 @@
 import React from "react";
 import cloudinary from "cloudinary";
 
-import ForceRefresh from "@/components/forceRefresh";
+import {ForceRefresh} from "@/components/forceRefresh";
 import FavouriteList from "./favouriteList";
-import { searchResult } from "@/app/gallery/page";
+import { SearchResult } from "@/app/gallery/page";
 
 
 export default async function FavouritePage() {
@@ -13,7 +13,7 @@ export default async function FavouritePage() {
     .sort_by("created_at", "desc")
     .with_field("tags")
     .max_results(30)
-    .execute()) as { resources: searchResult[] };
+    .execute()) as { resources: SearchResult[] };
 
   return (
     <section className="flex flex-col gap-8">

@@ -1,7 +1,7 @@
 import cloudinary from "cloudinary";
 import AlbumGrid from "./albumGrid";
-import { searchResult } from "@/app/gallery/page";
-import ForceRefresh from "@/components/forceRefresh";
+import { SearchResult } from "@/app/gallery/page";
+import {ForceRefresh} from "@/components/forceRefresh";
 
 export default async function GalleryPage({params:{albumName},
 }:{params:{albumName:string}}) {
@@ -10,7 +10,7 @@ export default async function GalleryPage({params:{albumName},
     .sort_by("created_at", "desc")
     .with_field("tags")
     .max_results(30)
-    .execute()) as { resources: searchResult[] };
+    .execute()) as { resources: SearchResult[] };
 
   const maxCol = 4;
   function getColumns(colIndex: number) {
