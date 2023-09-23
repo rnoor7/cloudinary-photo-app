@@ -100,7 +100,7 @@ export default function EditPage({
             src={publicId}
             width="1200"
             height="1400"
-            grayscale
+            //grayscale
             alt="some image"
           />
         )}
@@ -109,27 +109,27 @@ export default function EditPage({
             src={publicId}
             width="1200"
             height="1400"
-            pixelate
+            //pixelate
             alt="some image"
           />
         )}
-        {/* {transformation === "tint" && (
+        {transformation === "tint" && (
           <CldImage
             src={publicId}
             width="1200"
             height="1400"
-            tint="equalize:80:blue:blueviolet"
+            //tint="equalize:80:blue:blueviolet"
             alt="some image"
           />
-        )} */}
-        {transformation === "tint" && (
+        )}
+        {/* {transformation === "tint" && (
               <Image
                 src={`https://res.cloudinary.com/${cloudName}/image/upload/e_tint:80:blue:blueviolet/${publicId}`}
                 alt={"Tinted Image"}
                 width={600}
                 height={400}
               />
-            )}
+            )} */}
         {transformation === "effects" && (
           <CldImage
             src={publicId}
