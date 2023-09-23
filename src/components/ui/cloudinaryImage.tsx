@@ -3,15 +3,15 @@ import React, { useState, useTransition } from "react";
 import { CldImage, CldImageProps } from "next-cloudinary";
 import { Heart } from "@/components/icons/heart";
 import { setAsFavouriteAction } from "../../app/gallery/action";
-import { searchResult } from "../../app/gallery/page";
+import { SearchResult } from "../../app/gallery/page";
 import { FullHeart } from "@/components/icons/fullHeart";
 import { ImageMenu } from "./imageMenu";
 
 export default function CloudinaryImage(
    props:{
-    imageData: searchResult;
+    imageData: SearchResult;
     
-    onUnheart?: (unheartedResource: searchResult) => void;
+    onUnheart?: (unheartedResource: SearchResult) => void;
   } & Omit<CldImageProps, "src">
 ) {
   const { imageData, onUnheart } = props;

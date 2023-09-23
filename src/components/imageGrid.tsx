@@ -1,6 +1,6 @@
 "use client";
 
-import { searchResult } from "@/app/gallery/page";
+import { SearchResult } from "@/app/gallery/page";
 import { ReactNode } from "react";
 
 const maxCol = 4;
@@ -9,8 +9,8 @@ export function ImageGrid({
   images,
   getImage,
 }: {
-  images: searchResult[];
-  getImage: (imageData: searchResult) => ReactNode;
+  images: SearchResult[];
+  getImage: (imageData: SearchResult) => ReactNode;
 }) {
   function getColumns(colIndex: number) {
     return images.filter((resource, idx) => idx % maxCol === colIndex);

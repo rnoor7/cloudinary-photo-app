@@ -9,12 +9,12 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 import { AddToAlbumDailog } from "./addDailogueBox";
-import { searchResult } from "@/app/gallery/page";
+import { SearchResult } from "@/app/gallery/page";
 import { useState } from "react";
 import Link from "next/link";
 import { Pencil } from "lucide-react";
 
-export function ImageMenu({ image }: { image: searchResult }) {
+export function ImageMenu({ image }: { image: SearchResult }) {
   const [open, setOpen] = useState(false);
   return (
     <div className="absolute top-2 right-2">
