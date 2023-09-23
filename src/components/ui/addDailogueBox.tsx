@@ -1,4 +1,4 @@
-import { searchResult } from "@/app/gallery/page";
+import  {SearchResult}  from "@/app/gallery/page";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -19,7 +19,7 @@ export function AddToAlbumDailog({
   image,
   onClose,
 }: {
-  image: searchResult;
+  image: SearchResult;
   onClose: () => void;
 }) {
   const [albumName, setAlbumName] = useState("");
