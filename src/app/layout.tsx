@@ -113,7 +113,7 @@ export default function RootLayout({
         <div className="border-b ">
           <div className="flex h-16 items-center px-4 container mx-auto">
           <Image
-              src="/album.png"
+              src="/photos2.png"
               width="50"
               height="50"
               alt="icon of this photo album app"
