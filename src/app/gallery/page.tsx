@@ -1,27 +1,28 @@
-import React from "react";
+
 import UploadButton from "./uploadButton";
 import cloudinary from "cloudinary";
 import GalleryGrid from "./gallaryGrid";
+import { SearchForm } from "./searchForm";
 
-export type searchResult = {
+export type SearchResult = {
   public_id: string;
   tags: string[];
 };
 
-export default async function GalleryPage() {
+export default async function GalleryPage({
+  searchParams: { search },
+}: {
+  searchParams: {
+    search: string;
+  };
+}) {
   const results = (await cloudinary.v2.search
-    .expression(`resource_type:image`)
+    .expression(`resource_type:image${search ? ` AND tags=${search}` : ""}`)
     .sort_by("created_at", "desc")
     .with_field("tags")
     .max_results(30)
-    .execute()) as { resources: searchResult[] };
+    .execute()) as { resources: SearchResult[] };
 
-  const maxCol = 4;
-  function getColumns(colIndex: number) {
-    return results.resources.filter(
-      (resource, idx) => idx % maxCol == colIndex
-    );
-  }
 
   return (
     <section className="flex flex-col gap-8">
@@ -29,6 +30,7 @@ export default async function GalleryPage() {
         <h1 className="text-4xl font-bold">Gallery</h1>
         <UploadButton />
       </div>
+      <SearchForm initialSearch={search}/>
       <GalleryGrid images={results.resources} />
     </section>
   );
