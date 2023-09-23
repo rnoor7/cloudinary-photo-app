@@ -2,7 +2,9 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+
 import { CldImage } from "next-cloudinary";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function EditPage({
@@ -89,7 +91,7 @@ export default function EditPage({
             src={publicId}
             width="1200"
             height="1400"
-            blur="800"
+           // blur="800"
             alt="some image"
           />
         )}
@@ -111,7 +113,7 @@ export default function EditPage({
             alt="some image"
           />
         )}
-        {transformation === "tint" && (
+        {/* {transformation === "tint" && (
           <CldImage
             src={publicId}
             width="1200"
@@ -119,7 +121,15 @@ export default function EditPage({
             tint="equalize:80:blue:blueviolet"
             alt="some image"
           />
-        )}
+        )} */}
+        {transformation === "tint" && (
+              <Image
+                src={`https://res.cloudinary.com/${cloudName}/image/upload/e_tint:80:blue:blueviolet/${publicId}`}
+                alt={"Tinted Image"}
+                width={600}
+                height={400}
+              />
+            )}
         {transformation === "effects" && (
           <CldImage
             src={publicId}
