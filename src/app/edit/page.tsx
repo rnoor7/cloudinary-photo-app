@@ -91,7 +91,7 @@ export default function EditPage({
             src={publicId}
             width="1200"
             height="1400"
-            blur="800"
+            //blur="800"
             alt="some image"
           />
         )}
