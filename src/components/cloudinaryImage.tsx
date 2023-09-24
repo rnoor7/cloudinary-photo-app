@@ -2,8 +2,8 @@
 import React, { useState, useTransition } from "react";
 import { CldImage, CldImageProps } from "next-cloudinary";
 import { Heart } from "@/components/icons/heart";
-import { setAsFavouriteAction } from "../../app/gallery/action";
-import { SearchResult } from "../../app/gallery/page";
+import { setAsFavouriteAction } from "@/app/gallery/action";
+import { SearchResult } from "@/app/gallery/page";
 import { FullHeart } from "@/components/icons/fullHeart";
 import { ImageMenu } from "./imageMenu";
 

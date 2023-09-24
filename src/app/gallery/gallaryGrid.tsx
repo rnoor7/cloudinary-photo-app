@@ -2,7 +2,7 @@
 
 import { ImageGrid } from "@/components/imageGrid";
 import { SearchResult } from "./page";
-import  CloudinaryImage  from "../../components/ui/cloudinaryImage";
+import  CloudinaryImage  from "@/components/cloudinaryImage";
 
 export default function GalleryGrid({ images }: { images: SearchResult[] }) {
   return (

@@ -13,7 +13,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Album } from "lucide-react";
 import { useState } from "react";
-import { addImageToAlbum } from "../action";
+import { addImageToAlbum } from "./action";
 
 export function AddToAlbumDailog({
   image,

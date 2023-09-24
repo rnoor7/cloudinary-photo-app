@@ -1,4 +1,3 @@
-import React from "react";
 
 import cloudinary from "cloudinary";
 import { AlbumCard } from "./albumsCard";

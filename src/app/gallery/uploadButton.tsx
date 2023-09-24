@@ -11,18 +11,12 @@ const UploadButton = () => {
     <div>
       <Button asChild>
         <CldUploadButton
-        onUpload={(result:any)=>{
-          setTimeout(()=>{
+        onUpload={(result: UploadResult) => {
+          setTimeout(() => {
             router.refresh();
-          },2000);
+          }, 2000);
         }}
-          // onUpload={(result: UploadResult) => {
-          //   //setImageId(result.info.public_id);
-          //   setTimeout(()=>{
-          //       router.refresh();
-          //   },2000);
-            
-          // }}
+          
           uploadPreset="tjtwc7sf"
         >
           <div className="flex gap-2">

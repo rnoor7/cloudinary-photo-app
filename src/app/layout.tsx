@@ -29,7 +29,7 @@ async function SideMenu() {
           <div className="space-y-1">
             <Button
               asChild
-              variant="secondary"
+              variant="ghost"
               className="w-full justify-start flex gap-2 text-lg"
             >
               <Link href={"/gallery"}>
@@ -118,7 +118,7 @@ export default function RootLayout({
               height="50"
               alt="icon of this photo album app"
             />
-            PHOTOS APP
+            NOOR PHOTOS APP
             <div className="ml-auto flex items-center space-x-4">
               <Avatar>
                 <AvatarImage

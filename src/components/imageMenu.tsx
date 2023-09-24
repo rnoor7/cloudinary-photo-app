@@ -1,10 +1,9 @@
 import { Button } from "@/components/ui/button";
-import Menu from "../icons/menu";
+import Menu from "./icons/menu";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuShortcut,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
@@ -29,9 +28,18 @@ export function ImageMenu({ image }: { image: SearchResult }) {
             <AddToAlbumDailog image={image} onClose={() => setOpen(false)} />
           </DropdownMenuItem>
           <DropdownMenuItem asChild>
-           
-            <Link className=" cursor-pointer" href={`/edit?publicId=${encodeURIComponent(image.public_id)}`}> <Pencil className="ml-2 mr-2 h-4 w-4"/>Edit</Link>
-            {/* <AddToAlbumDailog image={image} onClose={() => setOpen(false)} /> */}
+          <Button
+              className="cursor-pointer flex justify-start pl-4"
+              asChild
+              variant="ghost"
+            >
+              <Link
+                href={`/edit?publicId=${encodeURIComponent(image.public_id)}`}
+              >
+                <Pencil className="mr-2 w-4 h-4" />
+                Edit
+              </Link>
+            </Button>
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
