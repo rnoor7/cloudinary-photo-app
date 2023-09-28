@@ -2,8 +2,15 @@
 import { Button } from "@/components/ui/button";
 import { CldUploadButton } from "next-cloudinary";
 
-import { UploadResult } from "../page";
+
 import { useRouter } from "next/navigation";
+
+interface UploadResult {
+  info: {
+    public_id: string;
+  };
+  event: "success";
+};
 
 const UploadButton = () => {
   const router = useRouter();
@@ -11,7 +18,8 @@ const UploadButton = () => {
     <div>
       <Button asChild>
         <CldUploadButton
-        onUpload={(result: UploadResult) => {
+        onClick={(results: UploadResult) => {
+         
           setTimeout(() => {
             router.refresh();
           }, 2000);
@@ -19,6 +27,7 @@ const UploadButton = () => {
           
           uploadPreset="tjtwc7sf"
         >
+      
           <div className="flex gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
