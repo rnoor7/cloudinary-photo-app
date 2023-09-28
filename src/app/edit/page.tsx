@@ -100,7 +100,7 @@ export default function EditPage({
             src={publicId}
             width="1200"
             height="1400"
-            grayscale
+            //grayscale
             alt="some image"
           />
         )}
@@ -109,7 +109,7 @@ export default function EditPage({
             src={publicId}
             width="1200"
             height="1400"
-            pixelate
+            //pixelate
             alt="some image"
           />
         )}
@@ -118,7 +118,7 @@ export default function EditPage({
             src={publicId}
             width="1200"
             height="1400"
-            tint="equalize:80:blue:blueviolet"
+            //tint="equalize:80:blue:blueviolet"
             alt="some image"
           />
         )}
